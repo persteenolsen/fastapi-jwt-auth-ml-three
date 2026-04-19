@@ -7,7 +7,9 @@ from ..auth import hash_password, verify_password, create_token
 
 router = APIRouter()
 
-@router.post("/register")
+# 19-04-2026 - Registration endpoint is currently disabled to prevent abuse in production at Vercel. 
+# You can enable it by uncommenting the decorator and the function.
+# @router.post("/register")
 def register(req: LoginRequest, db: Session = Depends(get_db)):
     existing = crud.get_user_by_username(db, req.username)
     if existing:

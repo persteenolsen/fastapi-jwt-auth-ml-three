@@ -173,7 +173,7 @@ Uvicorn
 
 - timestamps
 - pagination
-- user registration
+- user registration (disabled for Vercel)
 - Docker deployment
 - frontend dashboard
 

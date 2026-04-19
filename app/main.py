@@ -27,4 +27,4 @@ app.include_router(history.router)
 
 @app.get("/")
 def root():
-    return {"message": "API running"}
+    return {"message": "FastAPI + JWT + ML is running"}
