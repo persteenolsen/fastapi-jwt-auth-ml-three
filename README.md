@@ -25,30 +25,36 @@ A production-style Machine Learning API built with FastAPI, JWT authentication, 
 
 fastapi-jwt-auth-ml-three/
 │
-├── app/
-│   ├── main.py
-│   ├── database.py
-│   ├── models.py
-│   ├── schemas.py
-│   ├── crud.py
-│   ├── auth.py
-│   ├── dependencies.py
-│   ├── ml/
-│   │   ├── predictor.py
-│   │   └── model.pkl
-│   ├── routers/
-│   │   ├── auth.py
-│   │   ├── predict.py
-│   │   └── history.py
+├── app/                      # Main FastAPI application
+│   │
+│   ├── main.py              # App entry point
+│   ├── database.py          # DB connection + session
+│   ├── models.py            # SQLAlchemy models
+│   ├── schemas.py           # Pydantic schemas
+│   ├── crud.py              # Database operations
+│   ├── auth.py              # JWT logic (token creation/validation)
+│   ├── dependencies.py      # Shared dependencies (DB, auth)
+│   │
+│   ├── routers/             # API route modules
+│   │   ├── auth.py          # /login endpoint
+│   │   ├── predict.py       # /predict endpoint
+│   │   └── history.py       # /history endpoint
+│   │
+│   └── ml/                  # Inference layer (used by API)
+│       ├── predictor.py     # Loads model + makes predictions
+│       └── model.pkl        # Trained ML model
 │
-├── ml/
-│   ├── train.py
-│   ├── housing_v2.csv
+├── ml/                      # Training pipeline (offline)
+│   ├── train.py             # Model training script
+│   └── housing_v2.csv       # Training dataset
 │
-├── alembic/
-├── alembic.ini
-├── requirements.txt
-├── .env
+├── alembic/                 # Database migrations
+├── alembic.ini              # Alembic config
+│
+├── requirements.txt         # Python dependencies
+├── .env                     # Environment variables
+│
+└── README.md
 
 ---
 

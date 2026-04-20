@@ -12,7 +12,7 @@ Base.metadata.create_all(bind=engine)
 # -----------------------------
 app = FastAPI(
     title="FastAPI + JWT + ML (v3)",
-    description="19-04-2026 - House Price Prediction API with ML pipeline + JWT auth + PostgreSQL",
+    description="20-04-2026 - House Price Prediction API with ML pipeline + JWT auth + PostgreSQL",
     version="3.0.0",
     contact={
         "name": "Per Olsen",
