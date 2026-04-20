@@ -2,7 +2,7 @@
 
 Last updated:
 
-- 19-04-2026
+- 20-04-2026
 
 A production-style Machine Learning API built with FastAPI, JWT authentication, PostgreSQL (Neon), SQLAlchemy, and Alembic migrations.
 
